@@ -126,6 +126,7 @@ weighted avg    0.64      0.64      0.64       179
 -   **Device limitations:** the device used is not the top of the line spec of today, which is one of the reason this project took so long
 -   **Low quantity of data:** because of the dataset having minority classes (1-3), the need to artificially sample the dataset is a problem since doing this may resulted in a loss of information (not a 'real' case), if the dataset is updated into a more balanced dataset, the performance of each class should increase also
 -   **The need to drop 1 class:** this dataset actually has 5 classes, but because of just having 28 data, we decided to drop it because we can't get enough information to predict the class
+-   -   **Order of ID Column Removal in Preprocessing:** The 'ID' column was removed during a later feature selection phase. For stricter adherence to best practices and to eliminate any potential for the ID to influence data transformations (such as the predictive imputation model for categorical features), it would have been ideal to remove this identifier at the very onset of the data preprocessing pipeline. But due to project timelines, re-running the entire modeling process with this revised order was not feasible for this iteration unfortunately
 
 ---
 
@@ -135,3 +136,4 @@ weighted avg    0.64      0.64      0.64       179
 	-   Further feature engineering: given the theory of how significant feature engineering can be, more can be done such as creating a more advanced feature selection (tailored to minimizes class 2 and 3 weaknesses) can get better results
 	-   Exploring different meta learners: since time is at the essence right now, we can only try out base rf as the alternative and tune only with lr, exploration of a more complex meta learner such as a tuned rf, lgbm, or other models can yeild a better result too
 	-   Data augmentation for minority classes: getting more data or a more refined handling for minority classes (mainly 2 and 3)
+	-   a More Refined Preprocessing Workflow: Ensure identifier columns are unequivocally removed at the earliest stage of data preparation, prior to any imputation or feature engineering steps, to maintain the strictest data hygiene.
