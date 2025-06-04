@@ -2,7 +2,7 @@
 # %%writefile app.py
 import streamlit as st
 import joblib
-# import pickle as pkl
+import pickle as pkl
 import pandas as pd
 import numpy as np
 
