@@ -6,7 +6,26 @@ import pickle as pkl
 import pandas as pd
 import numpy as np
 
-st.title("Heart Disease Risk Input Form (UCI Dataset)")
+st.set_page_config(page_title="Heart Disease Predictor", layout="centered")
+
+st.title("❤️ Heart Disease Risk Predictor")
+
+# 🧠 Context and background
+st.markdown("""
+Welcome to the **Heart Disease Prediction App**.  
+This tool uses machine learning to estimate the likelihood that a patient has heart disease based on medical indicators.
+
+**Prediction Levels (`num`)**:
+- `0`: No heart disease
+- `1`: Mild
+- `2`: Moderate
+- `3`: Severe
+- `4`: Critical
+
+This app is trained using the [UCI Heart Disease dataset](https://archive.ics.uci.edu/ml/datasets/heart+Disease), with over 900 patient records.
+
+---
+""")
 
 # Inputs
 age = st.number_input("Age (years)", min_value=0, max_value=120, value=50)
@@ -17,25 +36,27 @@ origin = st.selectbox("Place of Study (origin)", options=[
 
 sex = st.selectbox("Sex", options=["Male", "Female"])
 
-cp = st.selectbox("Chest Pain Type (cp)", options=[
+cp = st.selectbox("Chest Pain Type (cp) : Determined by doctor/lab", options=[
     "typical angina", "atypical angina", "non-anginal", "asymptomatic"
 ])
 
-trestbps = st.number_input("Resting Blood Pressure (mm Hg)", min_value=80, max_value=200, value=120)
-chol = st.number_input("Serum Cholesterol (mg/dl)", min_value=100, max_value=600, value=200)
+trestbps = st.number_input("Resting Blood Pressure (mm Hg) : Use a home BP monitor or clinic reading (mm Hg)", min_value=80, max_value=200, value=120)
+chol = st.number_input("Serum Cholesterol : Blood test result(mg/dl)", min_value=100, max_value=600, value=200)
 
-fbs = st.selectbox("Fasting Blood Sugar > 120 mg/dl (fbs)", options=["Yes", "No"])
+fbs = st.selectbox("Fasting Blood Sugar > 120 mg/dl (fbs) : After 8–12 hours no eating. >120 mg/dL is high/Yes.", options=["Yes", "No"])
 
 restecg = st.selectbox("Resting ECG Results", options=[
     "normal", "stt abnormality", "lv hypertrophy"
 ])
 
 
-thalach = st.number_input("Max Heart Rate Achieved (thalach)", min_value=60, max_value=250, value=150)
+thalach = st.number_input("Max Heart Rate Achieved (thalach) : Measured during treadmill/stress test", min_value=60, max_value=250, value=150)
 
 exang = st.selectbox("Exercise-Induced Angina (exang)", options=["True", "False"])
 
-oldpeak = st.number_input("ST Depression Induced by Exercise (oldpeak)", min_value=0.0, max_value=6.0, step=0.1, value=1.0)
+oldpeak = st.number_input("ST Depression Induced by Exercise (oldpeak) : From stress ECG test (by doctor)", min_value=0.0, max_value=6.0, step=0.1, value=1.0)
+
+st.markdown("[🩺 Learn More: Heart Tests & Diagnosis](https://www.heart.org/en/health-topics/heart-attack/diagnosing-a-heart-attack)")
 
 # 33.59 missing percentage > 30% so removed column
 # slope = st.selectbox("Slope of Peak Exercise ST Segment", options=[
