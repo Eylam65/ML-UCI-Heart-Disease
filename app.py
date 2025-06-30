@@ -21,7 +21,7 @@ This tool uses machine learning to estimate the likelihood that a patient has he
 - `2`: Moderate
 - `3`: Severe
 
-This app is trained using the [UCI Heart Disease dataset](https://archive.ics.uci.edu/ml/datasets/heart+Disease), with over 900 patient records.
+This app is trained using the [UCI Heart Disease dataset](https://www.kaggle.com/datasets/redwankarimsony/heart-disease-data/data), with over 900 patient records.
 
 ---
 """)
