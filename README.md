@@ -72,7 +72,7 @@ This project is valuable especially since an early and accurate prediction of a 
      pip install -r requirements.txt
      ```
  4. Open and run the main analysis notebook (`AoL_ML_V7_Final.ipynb`) in a Jupyter environment to see the data loading, preprocessing, model training, tuning, and evaluation steps
- 5. If you just want to use the app locally, you can open and run the main app (`app.py`) by typing this on the terminal or bash :
+ 5. If you just want to use the app locally, you can open and run the main app (`app.py`) by typing this on the bash(In Visual Studio Code, it uses git bash) :
     ```bash
      streamlit run app.py
      ```
