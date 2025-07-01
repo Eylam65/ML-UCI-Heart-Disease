@@ -74,7 +74,8 @@ This project is valuable especially since an early and accurate prediction of a 
 - **Optuna** : A Bayesian optimization framework used for hyperparameter tuning of complex models like CatBoost and XGBoost efficiently and automatically.
 - **CatBoost, XGBoost, LightGBM** : These gradient boosting frameworks were used to build powerful classification models as part of the model experimentation and ensemble process.
 - **Matplotlib & Seaborn** : For data and model visualization, such as correlation heatmaps and feature distribution plots.
-- **Streamlit Cloud (Deployment)** : The final application was deployed using Streamlit Cloud, allowing online access to the prediction tool without requiring users to install the project locally.
+- **Streamlit Cloud (Deployment)** : The final application was deployed using Streamlit Cloud, allowing online access to the prediction tool without requiring users to install the project locally from app.py in the GitHub Repository. Deploy to [This App](https://ml-uci-heart-disease-jssaqbpnsr5e7ijuq5zqun.streamlit.app/).
+- **GitHub** : The complete source code, notebooks, and deployment files are maintained in a public GitHub repository: https://github.com/Eylam65/ML-UCI-Heart-Disease.
 
 ### App Structure (`app.py`)
 
@@ -98,7 +99,7 @@ The Streamlit app loads the exported preprocessing objects and trained model (al
 
 ### Deployment
 
-The application is deployed on [Streamlit Community Cloud](https://streamlit.io/cloud) using the `app.py` file directly from this GitHub repository. This enables anyone to access and interact with the app online without any local setup with the link https://ml-uci-heart-disease-jssaqbpnsr5e7ijuq5zqun.streamlit.app/.  
+The application is deployed on [Streamlit Community Cloud](https://streamlit.io/cloud) using the `app.py` file directly from this [GitHub repository](https://github.com/Eylam65/ML-UCI-Heart-Disease). This enables anyone to access and interact with the app online without any local setup with the link https://ml-uci-heart-disease-jssaqbpnsr5e7ijuq5zqun.streamlit.app/.  
 
 ---
 
