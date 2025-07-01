@@ -141,3 +141,46 @@ weighted avg    0.64      0.64      0.64       179
 	-   Exploring different meta learners: since time is at the essence right now, we can only try out base rf as the alternative and tune only with lr, exploration of a more complex meta learner such as a tuned rf, lgbm, or other models can yeild a better result too
 	-   Data augmentation for minority classes: getting more data or a more refined handling for minority classes (mainly 2 and 3)
 	-   a More Refined Preprocessing Workflow: Ensure identifier columns are unequivocally removed at the earliest stage of data preparation, prior to any imputation or feature engineering steps, to maintain the strictest data hygiene.
+
+---
+
+## Team Members and Contributions
+### Ardelle Jody Nathaniel  
+**Role: Lead Machine Learning Engineer & Technical Writer**  
+Ardelle led the development of the final machine learning model and authored the project's detailed documentation. Out of all the models created by the team, Ardelle's model was selected due to its superior performance (Accuracy: **0.64**, F1 Macro Score: **0.55**).  
+
+**Key Contributions:**
+- Designed the complete machine learning pipeline: preprocessing, feature engineering, modeling
+- Built and tuned multiple models: **Random Forest**, **Balanced Random Forest**, **XGBoost**, **CatBoost**, and **LightGBM**
+- Applied balancing techniques: **SMOTETomek** and **TomekLinks**
+- Built a **StackingClassifier** with **Logistic Regression** as the meta-learner
+- Performed hyperparameter tuning using **Optuna**
+- Wrote the full technical documentation in **README.md**
+
+---
+
+### Kenneth Andrew Lukita  
+**Role: Modeling Support, LDA Clustering, & Presentation Lead**  
+Kenneth contributed to model experimentation and supported the data exploration process. He also handled the design and delivery of the presentation materials.
+
+**Key Contributions:**
+- Conducted **baseline model training** and early evaluations using Jupyter Notebook
+- Performed **clustering using Linear Discriminant Analysis (LDA)** to explore feature separation
+- Helped validate models through metrics such as F1 Score, accuracy, and confusion matrices
+- Created the **PowerPoint presentation**
+- Summarized the technical and analytical results for effective communication
+
+---
+
+### Tandri Wibowo  
+**Role: Streamlit Developer, PCA Clustering, & Deployment Engineer**  
+Tandri was responsible for building and deploying the project’s user interface using **Streamlit**, and conducting additional exploratory analysis.
+
+**Key Contributions:**
+- Developed the interactive **Streamlit app** (`app.py`) to use the final model via `.pkl` file
+- Successfully **deployed the application** on **Streamlit Cloud**
+- Performed **clustering using Principal Component Analysis (PCA)** to visualize dimensionality-reduced patterns
+- Created **visualizations** such as:
+  - **Feature correlation heatmap**
+  - **Feature importance plots** from Random Forest
+- Conducted **hyperparameter tuning** for Random Forest during early modeling
