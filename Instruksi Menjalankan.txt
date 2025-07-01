@@ -1,0 +1,36 @@
+Bisa Mengikuti arahan video ini : https://drive.google.com/file/d/1R_sCZzNUHjnlsd6HzFLLssLtgQyPVsOi/view?usp=sharing
+
+Atau
+
+// Pakai online
+
+1. Masuk ke GitHub page : https://github.com/Eylam65/ML-UCI-Heart-Disease
+2. Tekan link ke app yang sudah dideploy ke streamlit di bagian kanan page : https://ml-uci-heart-disease-jssaqbpnsr5e7ijuq5zqun.streamlit.app/
+
+Atau
+
+1. Langsung tekan link ke app yang sudah dideploy ke streamlit di bagian kanan page : https://ml-uci-heart-disease-jssaqbpnsr5e7ijuq5zqun.streamlit.app/
+
+Atau
+
+// Pakai local
+
+1. Download zip lalu extract atau Clone repository :
+
+git clone https://github.com/Eylam65/ML-UCI-Heart-Disease.git
+cd <your-repository-name>
+
+2. Install the required dependencies:
+
+pip install -r requirements.txt
+
+3. Kalau mau pakai notebook yang dipakai sebagai main analysis :
+Open and run the main analysis notebook (AoL_ML_V7_Final.ipynb) in a Jupyter environment to see the data loading, preprocessing, model training, tuning, and evaluation steps
+
+4. If you just want to use the app locally, you can open and run the main app (app.py) by typing this on the bash(In Visual Studio Code, it uses git bash) :
+
+streamlit run app.py
+
+// Dalam pemakaian aplikasi :
+
+1. Bisa menginput data dan ada guide untuk bagaimana cara mendapat datanya di setiap data.
