@@ -79,7 +79,7 @@ The Streamlit app loads the exported preprocessing objects and trained model (al
 4. **Model Prediction**: Uses the stacking classifier to predict probabilities for each heart disease stage.
 5. **Output**: Displays the prediction and probabilities to the user.
 
-#### Key Implementation Details
+### Key Implementation Details
 
 - **Note on Input Features** : In the Streamlit app, certain columns—namely `ca`, `slope`, and `thal`—are commented out and not included as user input fields. This is because these columns had more than 30% missing values in the dataset, making them unreliable for modeling. As a result, they were removed during preprocessing and are not used in the final model.
 - All data transformations (scaling, imputation, encoding) and the model itself are exported from the notebook using `joblib` for consistency and reproducibility.
@@ -89,7 +89,10 @@ The Streamlit app loads the exported preprocessing objects and trained model (al
   - `mmscalerAfterFeatureEngineering.pkl`
   - `ohEncoder.pkl`
   - `FinalModelStacking.pkl`
-- See the [app.py](app.py) file for the full implementation.
+
+### Deployment
+
+The application is deployed on [Streamlit Community Cloud](https://streamlit.io/cloud) using the `app.py` file directly from this GitHub repository. This enables anyone to access and interact with the app online without any local setup with the link https://ml-uci-heart-disease-jssaqbpnsr5e7ijuq5zqun.streamlit.app/.  
 
 ---
 
