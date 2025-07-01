@@ -67,8 +67,14 @@ This project is valuable especially since an early and accurate prediction of a 
 - **Python**: The core programming language for all development.
 - **Jupyter Notebook**: For exploratory data analysis, data preprocessing, model building, and training (see `AoL_ML_V7_Final.ipynb`).
 - **Streamlit**: For building an interactive web app (`app.py`) that allows users to input patient data and receive heart disease risk predictions.
-- **pandas, numpy**: For data manipulation and numerical operations.
-- **joblib, pickle**: For saving and loading trained machine learning models and preprocessing pipelines as `.pkl` files.
+- **Pandas, Numpy**: For data manipulation and numerical operations.
+- **Joblib, Pickle**: For saving and loading trained machine learning models and preprocessing pipelines as `.pkl` files.
+- **Scikit-learn** : For data preprocessing (e.g., imputation, normalization, encoding), machine learning model implementation (Random Forest, Logistic Regression, etc.), and pipeline construction.
+- **Imbalanced-learn (imblearn)** : For handle class imbalance through techniques such as SMOTETomek and TomekLinks.
+- **Optuna** : A Bayesian optimization framework used for hyperparameter tuning of complex models like CatBoost and XGBoost efficiently and automatically.
+- **CatBoost, XGBoost, LightGBM** : These gradient boosting frameworks were used to build powerful classification models as part of the model experimentation and ensemble process.
+- **Matplotlib & Seaborn** : For data and model visualization, such as correlation heatmaps and feature distribution plots.
+- **Streamlit Cloud (Deployment)** : The final application was deployed using Streamlit Cloud, allowing online access to the prediction tool without requiring users to install the project locally.
 
 ### App Structure (`app.py`)
 
