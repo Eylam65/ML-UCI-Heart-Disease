@@ -60,6 +60,39 @@ This project is valuable especially since an early and accurate prediction of a 
 
 ---
 
+## Implementation
+
+### Technologies Used
+
+- **Python**: The core programming language for all development.
+- **Jupyter Notebook**: For exploratory data analysis, data preprocessing, model building, and training (see `AoL_ML_V7_Final.ipynb`).
+- **Streamlit**: For building an interactive web app (`app.py`) that allows users to input patient data and receive heart disease risk predictions.
+- **pandas, numpy**: For data manipulation and numerical operations.
+- **joblib, pickle**: For saving and loading trained machine learning models and preprocessing pipelines as `.pkl` files.
+
+### App Structure (`app.py`)
+
+The Streamlit app loads the exported preprocessing objects and trained model (all in `.pkl` format via joblib) and performs the following steps:
+1. **User Input**: Collects patient data via UI.
+2. **Preprocessing**: Applies scaling, imputation, feature engineering, and encoding to match model requirements.
+3. **Feature Selection**: Retains only the features used by the final model.
+4. **Model Prediction**: Uses the stacking classifier to predict probabilities for each heart disease stage.
+5. **Output**: Displays the prediction and probabilities to the user.
+
+#### Key Implementation Details
+
+- **Note on Input Features** : In the Streamlit app, certain columns—namely `ca`, `slope`, and `thal`—are commented out and not included as user input fields. This is because these columns had more than 30% missing values in the dataset, making them unreliable for modeling. As a result, they were removed during preprocessing and are not used in the final model.
+- All data transformations (scaling, imputation, encoding) and the model itself are exported from the notebook using `joblib` for consistency and reproducibility.
+- The app expects these files in the current directory:
+  - `mmscalerBeforeFeatureEngineering.pkl`
+  - `knnImputer.pkl`
+  - `mmscalerAfterFeatureEngineering.pkl`
+  - `ohEncoder.pkl`
+  - `FinalModelStacking.pkl`
+- See the [app.py](app.py) file for the full implementation.
+
+---
+
 ## Code & Usage
 
  1. Clone the repository:
